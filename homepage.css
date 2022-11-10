@@ -5,13 +5,13 @@
 }
 .navbar{
     margin-top: 20px;
-    
-    width:100%;
+     width:100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 img{
     width:14%;
     margin-left: 15px;
+    display:inline
 }
 
 .navbar ul{
@@ -26,6 +26,13 @@ img{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 }
+.navbar li a{
+    text-decoration: none;
+    color:black;
+}
+.navbar li a:hover{
+color:rgb(219, 81, 81);
+}
 .search{
     margin-left: 60px;
     
@@ -37,7 +44,16 @@ img{
     padding:10px 20px;
     
 }
+.sign-up a{
+    text-decoration: none;
+    color:black;
+    
+}
+.sign-up a:hover{
+    color:rgb(219, 81, 81);
+}
 .sign-up{
+    
     margin-left: 370px;
     margin-right: 40px;
     margin-top: 24px;
@@ -56,6 +72,7 @@ img{
     background-color: rgb(243, 243, 66);
     text-align: center;
     height:45px;
+    width:100%;
     font-size: 18px;
     padding-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -222,4 +239,9 @@ margin: 40px auto;
     width:100%;
     margin-left:30px;
     margin-top:40px;
+}
+
+#bottom img{
+    width:100%;
+    margin-top: 160px;
 }
