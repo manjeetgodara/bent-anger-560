@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px;
+    padding: 0px;
+}
+
+
+
+#container{
+    width:85%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap:20px;
+    
+    margin:5% auto;
+}
+
+#container>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    padding:10px;
+
+}
+#container>div>h3{
+    margin-bottom: 10px;
+}
+#container>div>p{
+    margin-top: 10px;
+}
+button{
+color:white;
+border: none;
+border-radius: 10px;
+background-color: rgb(53, 53, 150);
+padding:10px 20px;
+}
+.navbar{
+    margin-top: 20px;
+     width:100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.navbar img{
+    width:55%;
+    margin-left: 15px;
+    display:inline
+}
+
+.navbar ul{
+    display:flex;
+    
+
+}
+.navbar li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.navbar li a{
+    text-decoration: none;
+    color:black;
+}
+.navbar li a:hover{
+color:rgb(219, 81, 81);
+}
+.search{
+    margin-left: 60px;
+    
+    padding: 20px 30px;
+    width: 150px;
+}
+.search input{
+    width:380px;
+    padding:10px 20px;
+    
+}
+.sign-up a{
+    text-decoration: none;
+    color:black;
+    
+}
+.sign-up a:hover{
+    color:rgb(219, 81, 81);
+}
+.sign-up{
+    
+    margin-left: 370px;
+    margin-right: 40px;
+    margin-top: 24px;
+    font-size:15px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cart{
+    margin-top: 24px;
+    font-size:25px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
