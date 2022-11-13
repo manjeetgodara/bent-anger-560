@@ -1,6 +1,7 @@
 let url="https://636ddc13b567eed48acb2527.mockapi.io/Kids";
 
 let bag=[];
+let cartItem=JSON.parse(localStorage.getItem("cartProduct"))||[];
 fetch(url).then((res)=>res.json()).then((data)=>{
 bag.push(data);
 displayTable(data);
@@ -31,8 +32,16 @@ function displayTable(data){
            color.innerText="Color:-"+element.color;
         let btn=document.createElement("button");
 btn.innerText="Add To Cart";
+btn.addEventListener("click",function(){
+    cartItem.push(element);
+    localStorage.setItem("cartProduct",JSON.stringify(cartItem));
+    })
+        
         document.querySelector("#container").append(div);
 
         div.append(image,price,Brand,color,btn);
     });
 }
+
+//change name on homepage after login
+document.querySelector(".sign-up a").innerHTML=(localStorage.getItem("name"));

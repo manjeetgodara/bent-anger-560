@@ -36,6 +36,10 @@ border-radius: 10px;
 background-color: rgb(53, 53, 150);
 padding:10px 20px;
 }
+button:hover{
+    color:rgb(243, 237, 237);
+    background-color: black;
+}
 .navbar{
     margin-top: 20px;
      width:100%;
@@ -100,4 +104,12 @@ color:rgb(219, 81, 81);
     margin-left: 30px;
     font-weight: 600;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.upper span{
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.upper>span>i{
+    margin-right: 8px;
 }

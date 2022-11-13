@@ -15,5 +15,8 @@ function showSlides(){
         slideIndex=1;
     }
     slides[slideIndex-1].style.display="block";
-    setTimeout(showSlides,8000);
+    setTimeout(showSlides,6000);
 }
+
+//change name on homepage after login
+document.querySelector(".sign-up a").innerHTML=(localStorage.getItem("name"));

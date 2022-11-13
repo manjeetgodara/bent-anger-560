@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px;
+    padding: 0px;
+}
+
+
+
+#container{
+    width:85%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap:20px;
+    
+    margin:5% auto;
+}
+
+#container>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    padding:10px;
+
+}
+#container>div>h3{
+    margin-bottom: 10px;
+}
+#container>div>p{
+    margin-top: 10px;
+}
+button{
+color:white;
+border: none;
+border-radius: 10px;
+background-color: rgb(53, 53, 150);
+padding:10px 20px;
+}
+.navbar{
+    margin-top: 20px;
+     width:100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.navbar img{
+    width:55%;
+    margin-left: 15px;
+    display:inline
+}
+
+.navbar ul{
+    display:flex;
+    
+
+}
+.navbar li{
+    list-style: none;
+    margin-left: 80px;
+    margin-top: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.navbar li a{
+    text-decoration: none;
+    color:black;
+}
+.navbar li a:hover{
+color:rgb(219, 81, 81);
+}
+.search{
+    margin-left: 60px;
+    
+    padding: 20px 30px;
+    width: 150px;
+}
+.search input{
+    width:380px;
+    padding:10px 20px;
+    
+}
+.sign-up a{
+    text-decoration: none;
+    color:black;
+    
+}
+.sign-up a:hover{
+    color:rgb(219, 81, 81);
+}
+.sign-up{
+    
+    margin-left: 370px;
+    margin-right: 40px;
+    margin-top: 24px;
+    font-size:15px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cart{
+    margin-top: 24px;
+    font-size:25px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.filter>select{
+display:block;
+margin:2% auto;
+width:200px;
+height:40px;
+}
+.upper span{
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.upper>span>i{
+    margin-right: 8px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="upper" style=" height:38px ;background-color:black;color:white">
+            <span><i class="fa-thin fa-truck"></i>Free Shipping</span>
+            <span><i class="fa-regular fa-house"></i>Click & Collect</span>
+            <span><i class="fa-regular fa-house"></i>Return To Store</span>
+            <span class="right">Download Our App</span>
+            <span class="right">Help</span>
+            </div>
+        <nav class="navbar">
+
+
+            <ul>
+              <a href="homepage.html"><img src="img3.png" alt="logo"></a>
+                <li><a href="women.html" target="_blank">Women</a></li>
+                <li><a href="men.html" target="_blank">Men</a></li>
+                <li><a href="kids.html" target="_blank">Kids</a></li>
+                <div class="search"><input class="searchBox" type="text" placeholder="What are you looking for?"></div>
+                <div class="sign-up"><a href="login.html">Login</a></div>
+                <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            </ul>
+        </nav>
+    </header>
+   
+    <div id="container">
+
+    </div>
+    <div id="bottom">
+        <img src="p1.png" alt="bottom">
+    </div>
+</body>
+</html>
+<script>
+
+let cart=JSON.parse(localStorage.getItem("cartProduct"));
+displayTable(cart)
+
+function displayTable(data){
+    
+    document.querySelector("#container").innerHTML="";
+    data.forEach(element => {
+        let div=document.createElement("div");
+        
+        let image=document.createElement("img");
+          image.setAttribute("src",element.img);
+
+        let Price=document.createElement("h3");
+            Price.innerText=element.price;
+        let Brand=document.createElement("h5");
+              Brand.innerText=element.brand;
+        let color=document.createElement("p");
+           color.innerText="Color:-"+element.color;
+        let btn=document.createElement("button");
+btn.innerText="Remove"
+
+        document.querySelector("#container").append(div);
+
+        div.append(image,Price,Brand,color,btn);
+    });
+}
+
+
+</script>
