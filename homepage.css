@@ -4,7 +4,7 @@
     padding: 0px;
 }
 .navbar{
-    margin-top: 20px;
+    
      width:100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -237,7 +237,7 @@ margin: 40px auto;
 
 .lovedones img{
     width:100%;
-    margin-left:30px;
+    margin-left:80px;
     margin-top:40px;
 }
 
@@ -245,3 +245,13 @@ margin: 40px auto;
     width:100%;
     margin-top: 160px;
 }
+
+.upper span{
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.upper>span>i{
+    margin-right: 8px;
+}
+

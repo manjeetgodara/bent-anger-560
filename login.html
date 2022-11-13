@@ -1,33 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>
+            Reg. Form Using local storage js-part2
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="login.css">
+      </head>
+      <body>
+      
+      <div class="container">
+        <h2 style="color:rgb(223, 148, 91);text-align:center">Reg. Form</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="email">
+              </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-</head>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="psw" placeholder="Enter password" name="pwd">
+          </div>
+         
+          <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default">Submit</button>
+        </form>
+        <hr>
+        <h4 class="or">OR</h4>
+        <h4>Do you have an account already?<a href='sign.html'>sign-in</a></h4>
+      </div>
+      
+      </body>
+      <script>
+function saveData()
+{
+let name,email,psw;
+name=document.getElementById("name").value;
+email=document.getElementById("email").value;
 
-<body>
-    <form class="form-box">
-        <h1>Sign Up Now</h1>
-        
-            <input id="email" class="major" type="email" placeholder="Your Email"/><br>
-            <input id="password" class="major" type="password" placeholder="Your Password" /><br>
-            <input class="checkbox" type="checkbox" /><span>
-                <p>I agree to the term of the services</p>
-            </span><br>
-            <input class="submit" type="submit"/><br>
-            <hr>
-            <p class="or">OR</p>
-     <h6>Do yo have an account?<a href="sign.html">Sign in</a></h6>
-    </form>
+psw=document.getElementById("psw").value;
 
-</body>
+let user_records=new Array();
+user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+if(user_records.some((v)=>{return v.email==email}))
+{
+  alert("duplicate data");
+}
+else
+{
+  user_records.push({
+  "name":name,
+  "email":email,
+  "psw":psw
+})
+localStorage.setItem("users",JSON.stringify(user_records));
+}
 
-</html>
-
-<script src="login.js">
- 
-</script>
+}
+          </script>
+      </html>

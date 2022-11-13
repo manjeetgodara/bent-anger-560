@@ -5,7 +5,10 @@
     padding: 0px;
 }
 
-
+button:hover{
+    color:rgb(243, 237, 237);
+    background-color: black;
+}
 
 #container{
     width:85%;
@@ -95,6 +98,7 @@ color:rgb(219, 81, 81);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cart{
+    color:black;
     margin-top: 24px;
     font-size:25px;
     margin-left: 30px;
@@ -107,4 +111,12 @@ display:block;
 margin:2% auto;
 width:200px;
 height:40px;
+}
+.upper span{
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.upper>span>i{
+    margin-right: 8px;
 }

@@ -1,60 +1,35 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-}
-
 body{
-    background-image:url("https://img.freepik.com/free-vector/fashion-clothes-store-background_1308-53117.jpg?w=2000");
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    background-color: rgb(238, 247, 247);
 }
 
-.form-box{
+.container{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgb(250, 249, 249);
-    height:500px;
-    width:25%;
-    margin:13% auto;
-    padding:18px;
+    width:460px;
+    margin-top:10%;
+}
+
+.form-group>input{
+    width:400px;
+}
+
+#save_btn{
     
-}
-h1{
-    text-align: center;
-    color:rgb(36, 36, 221)
-}
-.major{
-    margin-left:30px;
-    margin-top:40px;
-    width:330px;
-    height:32px;
-    border-radius: 13px;
-}
-.checkbox{
-    margin-top: 40px;
-    margin-left: 30px;
-    
-}
-p{
-    display:inline;
-    font-weight: bold;
-}
-.submit{
-    display:block;
-    margin:8% auto;
-    width:330px;
-    height:32px;
-    border-radius:15px;
-    background-color: rgb(48, 48, 238);
+    width:300px;
+    padding:10px 20px;
+    margin-left:50px;
+    border-radius: 20px;
+    border:none;
+    background-color: rgb(223, 157, 103);
+    font-weight: 600;
     color:white;
-    font-size:17px;
+}
+
+h4{
+    text-align: center;
+}
+h4 a{
+    font-size:25px
 }
 .or{
-margin-left:170px;
-}
-h6{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 30px;
+    font-weight: 700;
 }
